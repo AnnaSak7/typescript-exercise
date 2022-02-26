@@ -70,3 +70,12 @@ form.addEventListener('submit', (e: Event) => {
   }
   list.render(doc, type.value, 'end');
 });
+
+const addUID = <T>(obj: T) => {
+  let uid = Math.floor(Math.random() * 100);
+  return { ...obj, uid };
+};
+
+let docOne = addUID({ name: 'yoshi', age: 40 });
+
+console.log(docOne.age);
